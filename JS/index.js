@@ -1,17 +1,8 @@
-const url = 'https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv';
-
-
-// try {
-// 	const response = await fetch(url, options);
-// 	const result = await response.text();
-// 	console.log(result);
-// } catch (error) {
-// 	console.error(error);
-// }
-
-
-
-const getAlbumYear = async () => {
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const URL = 'https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv';
+    
+    const getAlbumYear = async () => {
     try {
         const response = await fetch(URL, {
             method: 'GET', 
@@ -20,9 +11,9 @@ const getAlbumYear = async () => {
                 'x-rapidapi-host': 'spotify23.p.rapidapi.com'
             }
         }
-        )
-
-        if(!response.ok) {
+    )
+    
+    if(!response.ok) {
             console.log(response.status)
         }
         const json = await response.json()
@@ -32,3 +23,6 @@ const getAlbumYear = async () => {
         console.log(err)
     }
 }
+
+getAlbumYear()
+})

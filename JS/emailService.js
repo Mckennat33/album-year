@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const subscribeBttn = document.querySelector('.sub-bttn')
         subscribeBttn.addEventListener('click', (ev) => {
             const emailId = document.getElementById('emailInput').value
-            // ev.preventDefualt()
             console.log(emailId)
             // need to get real URL 
             const emailData = 'ursl for data'

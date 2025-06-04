@@ -1,13 +1,27 @@
+const url = 'https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv';
 
-const albumApiKey = e300ea72cfe9f364f1f202d9f6e328a9
 
-const URL = `http://www.last.fm/api/auth/?${albumApiKey}=xxx
-`
+// try {
+// 	const response = await fetch(url, options);
+// 	const result = await response.text();
+// 	console.log(result);
+// } catch (error) {
+// 	console.error(error);
+// }
+
 
 
 const getAlbumYear = async () => {
     try {
-        const response = await fetch(URL)
+        const response = await fetch(URL, {
+            method: 'GET', 
+            headers: {
+                'x-rapidapi-key': 'de51889a1fmshe095099b1a97993p13134fjsnc818ad7373cb',
+                'x-rapidapi-host': 'spotify23.p.rapidapi.com'
+            }
+        }
+        )
+
         if(!response.ok) {
             console.log(response.status)
         }

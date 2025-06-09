@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     const URL = 'https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv';
+
+// 3IBcauSj5M2A6lTeffJzdv
     
     const getAlbumYear = async () => {
     try {
@@ -16,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if(!response.ok) {
             console.log(response.status)
         }
-        const json = await response.json()
-        console.log(json)
+        const jsonAlbumData = await response.json()
+        console.log(jsonAlbumData.albums[0])
 
     } catch(err) {
         console.log(err)

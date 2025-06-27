@@ -6,15 +6,23 @@ const URL = `http://www.last.fm/api/auth/?${albumApiKey}=xxx
 
 
 const getAlbumYear = async () => {
+
     try {
         const response = await fetch(URL)
         if(!response.ok) {
             console.log(response.status)
         }
-        const json = await response.json()
+        const albumData = await response.json()
         console.log(json)
+        displayAlbumData(albumData)
 
     } catch(err) {
         console.log(err)
     }
+}
+
+// intitial function to get album data
+
+function displayAlbumData(data) {
+    console.log(data)
 }

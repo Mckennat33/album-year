@@ -25,4 +25,7 @@ const getAlbumYear = async () => {
 
 function displayAlbumData(data) {
     console.log(data)
+
+    // Data get retreived daily at midnight and fetches each album that came out that year and that data. 
+    // Diplays Artist name, Album name, Track list?. what year and date it came out.
 }
